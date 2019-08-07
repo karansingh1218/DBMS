@@ -1,3 +1,6 @@
+<?php
+    require "header.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-<h1> Add Employee Information </h1>
+<h1> Employee Salary Calculation </h1>
 <div class="salary-calculation">
-    <form action="includes/addemployee.inc.php" method = "post">
+    <form action="includes/salarycalculations.inc.php" method = "post">
         <fieldset>
             <legend>Personal Information</legend>
-                First Name: <br>
-                <input type="text" name="firstname" value="John"><br>
-                Last name: <br>
-                <input type="text" name="lastname" value="Doe"><br>
-                Exercise Type: <br>
-                <input type="text" name="exercise-type"><br>
+                Eid: <br>
+                <input type="text" name="eid-name" value="John"><br>
                 Hourly Rate: <br>
                 <input type="text" name="hourly-rate"><br>
                 Hours Per Week: <br>

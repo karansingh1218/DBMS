@@ -12,7 +12,9 @@
 <body>
     <form action="includes/employeedetails.inc.php" method="post">
         <!-- Retrieve Employee Details: <button type="submit" name="retrieve-employee" value="Submit">Submit</button> -->
-        <input type="submit" name="submit-all" value="Submit">
+        internal employees<input type="submit" name="internal-employee" value="Submit">
+        <br><br>
+        external employees<input type="submit" name = "external-employee" value="Submit">
     </form>
 
 </body>

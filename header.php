@@ -45,7 +45,7 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a href="addemployee.php">Add Employee</a></li>
       <li><a href="employeedetails.php">Employee Details</a></li>
-      <li><a href="#">Salary Calculations</a></li>
+      <li><a href="salarycalculations.php">Salary Calculations</a></li>
       <li><a href="#">All Salaries</a></li>
     </ul>
   </div>
