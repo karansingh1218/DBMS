@@ -43,10 +43,11 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li><a href="addemployee.php">Add Employee</a></li>
-      <li><a href="employeedetails.php">Employee Details</a></li>
-      <li><a href="salarycalculations.php">Salary Calculations</a></li>
-      <li><a href="#">All Salaries</a></li>
+      <!-- <li><a href="addemployee.php">Add Employee</a></li> -->
+      <li><a href="addsection.php">Add Section</a></li>
+      <li><a href="classregistration.php">Class Registration</a></li>
+      <li><a href="employeedetails.php">Employee Pay</a></li>
+      <!-- <li><a href="#">All Salaries</a></li> -->
     </ul>
   </div>
 </nav>
