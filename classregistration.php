@@ -14,7 +14,7 @@
         <fieldset>
             <legend>Class Registration</legend>
                 Excercise Number: <br>
-                <input type="text" name="excercisenumber-id" value="d"><br>
+                <input type="text" name="excercisenumber-id" value="1"><br>
                 Member Number: <br>
                 <input type="text" name="membernumber-id" value="2"><br>
                 Building: <br>

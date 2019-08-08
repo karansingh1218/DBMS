@@ -3,7 +3,7 @@
 $servername = "localhost";
 $dBUsername = "root";
 $dbPassword= "";
-$dBName = "NJIT";
+$dBName = "Gym";
 
 // Create Connection
 // Here we are using the MySQLI Object Oriented method to open a connection to MySQL.

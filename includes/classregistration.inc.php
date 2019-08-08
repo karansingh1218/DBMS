@@ -2,7 +2,6 @@
 
     if(isset($_POST['submit-registration'])) {
 
-        echo "FUCKC YOU";
         require 'dbh.inc.php';
 
         $excercisenumber = $_POST['excercisenumber-id'];

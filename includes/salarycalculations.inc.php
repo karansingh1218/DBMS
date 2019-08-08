@@ -1,5 +1,3 @@
-<!-- Author : Karan Singh
-     UCID   : ks572 -->
 <?php
     
     function tax_calc_internal($salary) {

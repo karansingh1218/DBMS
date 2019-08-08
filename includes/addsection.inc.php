@@ -2,7 +2,6 @@
 
     if(isset($_POST['submit-section'])) {
 
-        echo "FUCKC YOU";
         require 'dbh.inc.php';
 
         $building = $_POST['building-id'];
@@ -22,7 +21,7 @@
         echo $starttime;
 
         $sql = "INSERT INTO section (Building, Room_Number, Exercise_Number, InstructorID, Duration, Class_Date, Class_Start_Time )
-                    VALUES ('$building', '$roomnumber', '$excercisenumber', '$instructorid', '$duration', '$classdate', 'starttime')";
+                    VALUES ('$building', '$roomnumber', '$excercisenumber', '$instructorid', '$duration', '$classdate', '$starttime')";
 
             if ($conn->query($sql) === TRUE) {
                 echo "the external employee has been added to the database";
