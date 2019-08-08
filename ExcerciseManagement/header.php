@@ -27,7 +27,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Human Resource Management</title>
+  <title>Excercise Management</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -39,17 +39,16 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">Human Resource Management</a>
+      <a class="navbar-brand" href="index.php">Excercise Management</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.php">Home</a></li>
       <!-- <li><a href="addemployee.php">Add Employee</a></li> -->
-      <!-- <li><a href="addsection.php">Add Section</a></li>
-      <li><a href="currentsection.php">Current Section</a></li>
-      <li><a href="classregistration.php">Class Registration</a></li> -->
-      <li><a href="addemployee.php">Add Employee</a></li>
-      <li><a href="employeedetails.php">Employee Pay</a></li>
-
+      <li><a href="addsection.php">Add Section</a></li>
+      <li><a href="currentsection.php">Available Sections</a></li>
+      <li><a href="classregistration.php">Class Registration</a></li>
+      <!-- <li><a href="employeedetails.php">Employee Pay</a></li>
+      <li><a href="addemployee.php">Add Employee</a></li> -->
       <!-- <li><a href="#">All Salaries</a></li> -->
     </ul>
   </div>

@@ -40,50 +40,70 @@
     if(isset($_POST['submit-userprofile'])) {
         require 'dbh.inc.php';
 
-        $instructorid = $_POST['instructor-id'];
+        $instructorid   = $_POST['instructor-id'];
         $instructorname = $_POST['instructor-name'];
-        $hoursperweek = $_POST['hours-per-week'];
-        $hourlyrate = $_POST['hourly-rate'];
-        $salary = $_POST['salary'];
+        $hourlyrate     = $_POST['external-wages-hour'];
+        $salary         = $_POST['salary'];
+        // $instructorname = $_POST['instructor-name'];
+        // $hoursperweek = $_POST['hours-per-week'];
+        // $hourlyrate = $_POST['hourly-rate'];
+        // $salary = $_POST['salary'];
         $instructortype = $_POST['choose'];
 
         if ($instructortype === 'yes') {
 
             // ADD SQL STATEMENT FOR WHATEVER DATA THAT SAID IT IS YES
-            $untaxedsalary       = salarycalculator($hourlyrate, $hoursperweek);
+            // $untaxedsalary       = salarycalculator($hourlyrate, $hoursperweek);
             
-            $externaltaxedsalary = tax_calc_external($untaxedsalary);
+            // $externaltaxedsalary = tax_calc_external($untaxedsalary);
 
-            echo "untaxed salary  ". $untaxedsalary . "<b>";
-            echo "taxed salary ". $externaltaxedsalary ."<b>";
+            // echo "untaxed salary  ". $untaxedsalary . "<b>";
+            // echo "taxed salary ". $externaltaxedsalary ."<b>";
 
-            $sql = "INSERT INTO Nonsalary (instructorID, instructor_name, hoursperweek, hourlyrate, salary, taxedsalary)
-                    VALUES ('$instructorid', '$instructorname', '$hoursperweek', '$hourlyrate', '$untaxedsalary', '$externaltaxedsalary')";
+            
+            // $sql = "INSERT INTO Nonsalary (instructorID, instructor_name, hoursperweek, hourlyrate, salary, taxedsalary)
+            //         VALUES ('$instructorid', '$instructorname', '$hoursperweek', '$hourlyrate', '$untaxedsalary', '$externaltaxedsalary')";
+            $sql2 = "INSERT INTO external (instructorID, Wage)
+                    VALUES ('$instructorid', '$hourlyrate')";
 
-            if ($conn->query($sql) === TRUE) {
+            $sql1 = "INSERT INTO instructor (instructorID, Instructor_Name)
+                    VALUES ('$instructorid', '$instructorname')";
+
+            if ($conn->query($sql1) === TRUE) {
                 echo "the external employee has been added to the database";
             }
-            
+            if ($conn->query($sql2) === TRUE) {
+                echo "the external employee has been added to the database";
+            }
             else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                echo "Error: " . $sql1 . "<br>" . $conn->error;
             }
         }
         else {
-
             //ADD SQL STATEMENT FOR WHATEVER DATA THAT IS SAID FOR NO
-            $untaxedsalary = $salary;
+            // $untaxedsalary = $salary;
 
-            $internaltaxedsalary = tax_calc_internal($salary);
+            // $internaltaxedsalary = tax_calc_internal($salary);
 
-            $sql = "INSERT INTO Salary (instructorID, instructor_name, salary, taxedsalary)
-                    VALUES ( '$instructorid', '$instructorname', '$untaxedsalary', '$internaltaxedsalary')";
+
+            $sql1 = "INSERT INTO instructor (instructorID, Instructor_Name)
+                    VALUES ('$instructorid', '$instructorname')";
+
+            $sql2 = "INSERT INTO employee (instructorID, Salary)
+                    VALUES ('$instructorid', '$salary')"; 
+
+            // $sql = "INSERT INTO Salary (instructorID, instructor_name, salary, taxedsalary)
+            //         VALUES ( '$instructorid', '$instructorname', '$untaxedsalary', '$internaltaxedsalary')";
             
-            if ($conn->query($sql) === TRUE) {
+            if ($conn->query($sql1) === TRUE) {
                 echo " The internal employee has been added to the database";
             }
-
+            if ($conn->query($sql2) === TRUE) {
+                echo " The internal employee has been added to the database";
+            }
+            
             else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                echo "Error: " . $sql1 . "<br>" . $conn->error;
             }
         }
     }

@@ -14,31 +14,33 @@
         <fieldset>
             <legend>Personal Information</legend>
                 Instructor ID: <br>
-                <input type="text" name="instructor-id" ><br>
+                <input type="text" name="instructor-id" value="John"><br>
                 Instructor Name: <br>
                 <input type="text" name="instructor-name" value="Doe"><br>
                 Instructor Type: <br>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
                 <input type="radio" name="choose" value='yes'>External
                 <input type="radio" name="choose" value='no'>Internal<br><br>
-                <!-- external employee -->
-                <input type="text" id="external_wages" name = "external-wages-hour" placeholder = "Hourly Rate"><br><br>
-                <!-- Internal Employee -->
-                <input type="text" id="internal-salary" name = "salary" placeholder = "Enter Salary"><br><br>
+                <input type="text" id="external-hours" name = "hours-per-week" placeholder = "Enter Number Of Hours"><br><br>
+                <input type="text" id="external-wages" name = "hourly-rate" placeholder = "Enter Hourly Rate"><br>
+                <input type="text" id="internal-wages" name = "salary" placeholder = "Enter Salary"><br><br>
                 <script>
                 $('input[name="choose"]').click(function(e) {
 
                     if (e.target.value === 'yes') {
-                        $('#external_wages').show();
+                        $('#external-hours').show();
+                        $('#external-wages').show();
                     } else if (e.target.value === 'no'){
-                        $('#internal-salary').show();
+                        $('#internal-wages').show();
                     } else {
-                        $('#internal-salary').hide();
-                        $('#external_wages').hide();
+                        $('#external-hours').hide();
+                        $('#external-wages').hide();
+                        $('#internal-wages').hide();
                     }
                 })
-                    $('#external_wages').hide();
-                    $('#internal-salary').hide();
+                    $('#external-hours').hide();
+                    $('#external-wages').hide();
+                    $('#internal-wages').hide();
                 </script>
                 <button type="submit" name = "submit-userprofile"> Submit</button>               
         </fieldset>         
